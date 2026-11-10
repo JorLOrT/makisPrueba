@@ -1,0 +1,30 @@
+{
+  "info": {
+    "name": "Makis API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "baseUrl", "value": "http://localhost:8080" }
+  ],
+  "item": [
+    {
+      "name": "GET - Listar makis",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/api/makis"
+      }
+    },
+    {
+      "name": "POST - Crear maki",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nombre\": \"Maki Furai\",\n  \"sabor\": \"Langostino empanizado y palta\",\n  \"piezas\": 10,\n  \"precio\": 29.90\n}"
+        },
+        "url": "{{baseUrl}}/api/makis"
+      }
+    }
+  ]
+}

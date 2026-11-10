@@ -1,0 +1,6 @@
+.gradle
+build
+.idea
+postman
+*.iml
+.DS_Store
