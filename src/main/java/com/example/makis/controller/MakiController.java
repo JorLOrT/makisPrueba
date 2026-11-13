@@ -28,9 +28,9 @@ public class MakiController {
     // POST /api/makis -> crea uno nuevo (el id lo genera el servidor)
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public Maki crear(@RequestBody Maki datos) {
-        Maki nuevo = new Maki(UUID.randomUUID(), datos.nombre(), datos.sabor(), datos.piezas(), datos.precio());
-        makis.add(nuevo);
-        return nuevo;
+    public Maki crear(@RequestBody Maki maki) {
+        maki.setId(UUID.randomUUID());
+        makis.add(maki);
+        return maki;
     }
 }
